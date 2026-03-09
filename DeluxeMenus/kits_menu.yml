@@ -1,0 +1,94 @@
+# ==============================
+#   Kits Menu - DeluxeMenus
+#   Supports Cooldown display
+# ==============================
+
+menu_title: "&8[ &aالكيتات &8]"
+menu_type: CHEST
+menu_rows: 4
+open_command: kits
+
+items:
+  background:
+    material: GREEN_STAINED_GLASS_PANE
+    slot: 0-35
+    display_name: " "
+
+  # ── كيت المبتدئين ──
+  kit_starter:
+    material: IRON_SWORD
+    slot: 11
+    display_name: "&aكيت Starter"
+    lore:
+      - " "
+      - "&7محتويات الكيت:"
+      - "&f- &7سيف حديد"
+      - "&f- &764 خبز"
+      - "&f- &7درع حديد كامل"
+      - " "
+      - "%cmdcooldown_kit_starter_formatted% &7متبقي"  
+      - " "
+      - "&aاضغط للحصول على الكيت"
+      - " "
+    left_click_commands:
+      - "[console] kit starter %player_name%"
+    left_click_cooldown: 86400        # 24 ساعة بالثواني
+    left_click_cooldown_bypass: ztrx.kit.bypass
+
+  # ── كيت VIP ──
+  kit_vip:
+    material: DIAMOND_SWORD
+    slot: 13
+    display_name: "&bكيت &eVIP"
+    lore:
+      - " "
+      - "&7محتويات الكيت:"
+      - "&f- &7سيف ديموند Sharpness 2"
+      - "&f- &732 تفاحة ذهبية"
+      - "&f- &7درع ديموند كامل"
+      - " "
+      - "%cmdcooldown_kit_vip_formatted% &7متبقي"
+      - " "
+      - "%checkperm_ztrx.vip_&aاضغط للحصول على الكيت_&cيتطلب رتبة VIP%"
+      - " "
+    left_click_commands:
+      - "[console] kit vip %player_name%"
+    left_click_cooldown: 43200        # 12 ساعة
+    view_requirement:
+      requirements:
+        vip_check:
+          type: has permission
+          permission: ztrx.vip
+
+  # ── كيت MVP ──
+  kit_mvp:
+    material: NETHERITE_SWORD
+    slot: 15
+    display_name: "&5كيت &dMVP"
+    lore:
+      - " "
+      - "&7محتويات الكيت:"
+      - "&f- &7سيف نيثرايت Fire Aspect"
+      - "&f- &716 تفاحة ذهبية إنشانتيد"
+      - "&f- &7درع نيثرايت كامل"
+      - " "
+      - "%cmdcooldown_kit_mvp_formatted% &7متبقي"
+      - " "
+      - "%checkperm_ztrx.mvp_&aاضغط للحصول على الكيت_&cيتطلب رتبة MVP%"
+      - " "
+    left_click_commands:
+      - "[console] kit mvp %player_name%"
+    left_click_cooldown: 21600        # 6 ساعات
+    view_requirement:
+      requirements:
+        mvp_check:
+          type: has permission
+          permission: ztrx.mvp
+
+  # ── رجوع ──
+  back:
+    material: ARROW
+    slot: 31
+    display_name: "&7رجوع"
+    left_click_commands:
+      - "[openguimenu] profile_menu"

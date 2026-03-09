@@ -1,0 +1,129 @@
+# ==============================
+#   Coin Shop - DeluxeMenus
+#   GoldShop Style
+# ==============================
+
+menu_title: "&8[ &6متجر العملات &8]"
+menu_type: CHEST
+menu_rows: 5
+open_command: coinshop
+
+items:
+  background:
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 0-44
+    display_name: " "
+
+  # ── عنوان المتجر ──
+  title:
+    material: GOLD_BLOCK
+    slot: 4
+    display_name: "&6&lمتجر العملات"
+    lore:
+      - " "
+      - "&7رصيدك: &e%vault_eco_balance_fixed% &6عملة"
+      - " "
+
+  # ── منتج 1: تفاحة ذهبية ──
+  item_golden_apple:
+    material: GOLDEN_APPLE
+    slot: 20
+    display_name: "&eتفاحة ذهبية &8x8"
+    lore:
+      - " "
+      - "&7السعر: &e50 &6عملة"
+      - "&7رصيدك: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&aاضغط للشراء"
+      - " "
+    left_click_commands:
+      - "[takemoney] 50"
+      - "[console] give %player_name% golden_apple 8"
+      - "[message] &aاشتريت &e8 تفاحة ذهبية &aبـ &e50 عملة!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 50
+          deny_commands:
+            - "[message] &cما عندك رصيد كافي! تحتاج &e50 &cعملة"
+
+  # ── منتج 2: توب خبز ──
+  item_bread:
+    material: BREAD
+    slot: 21
+    display_name: "&eخبز &8x64"
+    lore:
+      - " "
+      - "&7السعر: &e20 &6عملة"
+      - "&7رصيدك: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&aاضغط للشراء"
+      - " "
+    left_click_commands:
+      - "[takemoney] 20"
+      - "[console] give %player_name% bread 64"
+      - "[message] &aاشتريت &e64 خبزة &aبـ &e20 عملة!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 20
+          deny_commands:
+            - "[message] &cما عندك رصيد كافي! تحتاج &e20 &cعملة"
+
+  # ── منتج 3: جوهرة ──
+  item_diamond:
+    material: DIAMOND
+    slot: 22
+    display_name: "&bجوهرة &8x5"
+    lore:
+      - " "
+      - "&7السعر: &e200 &6عملة"
+      - "&7رصيدك: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&aاضغط للشراء"
+      - " "
+    left_click_commands:
+      - "[takemoney] 200"
+      - "[console] give %player_name% diamond 5"
+      - "[message] &aاشتريت &b5 جواهر &aبـ &e200 عملة!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 200
+          deny_commands:
+            - "[message] &cما عندك رصيد كافي! تحتاج &e200 &cعملة"
+
+  # ── منتج 4: ذهب ──
+  item_gold:
+    material: GOLD_INGOT
+    slot: 23
+    display_name: "&eذهب &8x16"
+    lore:
+      - " "
+      - "&7السعر: &e75 &6عملة"
+      - "&7رصيدك: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&aاضغط للشراء"
+      - " "
+    left_click_commands:
+      - "[takemoney] 75"
+      - "[console] give %player_name% gold_ingot 16"
+      - "[message] &aاشتريت &e16 ذهبة &aبـ &e75 عملة!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 75
+          deny_commands:
+            - "[message] &cما عندك رصيد كافي! تحتاج &e75 &cعملة"
+
+  # ── رجوع ──
+  back:
+    material: ARROW
+    slot: 40
+    display_name: "&7رجوع"
+    left_click_commands:
+      - "[openguimenu] profile_menu"

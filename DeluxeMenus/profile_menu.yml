@@ -1,0 +1,74 @@
+# ==============================
+#   Profile Menu - DeluxeMenus
+#   Made for ZTRX Application
+# ==============================
+
+menu_title: "&8[ &b%player_name% &8]"
+menu_type: CHEST
+menu_rows: 4
+open_command: profile
+
+# ── خلفية رمادية تملأ القائمة ──
+items:
+  background:
+    material: GRAY_STAINED_GLASS_PANE
+    slot: 0-35
+    display_name: " "
+
+  # ── معلومات اللاعب ──
+  player_head:
+    material: PLAYER_HEAD
+    slot: 13
+    display_name: "&b%player_name%"
+    nbt: "{SkullOwner:\"%player_name%\"}"
+    lore:
+      - " "
+      - "&7الرتبة: &e%vault_rank%"
+      - "&7الرصيد: &a$%vault_eco_balance_fixed%"
+      - "&7المستوى: &d%auraskills_power%"
+      - "&7الإحداثيات: &f%player_x%, %player_y%, %player_z%"
+      - " "
+
+  # ── إحصائيات ──
+  stats:
+    material: BOOK
+    slot: 20
+    display_name: "&eالإحصائيات"
+    lore:
+      - " "
+      - "&7وقت اللعب: &f%statistic_time_played%"
+      - "&7قتلت: &c%statistic_player_kills% &7لاعب"
+      - "&7مُتّ: &c%statistic_deaths% &7مرة"
+      - " "
+
+  # ── الكيتات ──
+  kits_btn:
+    material: CHEST
+    slot: 22
+    display_name: "&aالكيتات"
+    lore:
+      - " "
+      - "&7اضغط لتفتح قائمة الكيتات"
+      - " "
+    left_click_commands:
+      - "[openguimenu] kits_menu"
+
+  # ── المتجر ──
+  shop_btn:
+    material: GOLD_INGOT
+    slot: 24
+    display_name: "&6المتجر"
+    lore:
+      - " "
+      - "&7اضغط لتفتح المتجر"
+      - " "
+    left_click_commands:
+      - "[openguimenu] coin_shop"
+
+  # ── زر إغلاق ──
+  close:
+    material: BARRIER
+    slot: 31
+    display_name: "&cإغلاق"
+    left_click_commands:
+      - "[close]"

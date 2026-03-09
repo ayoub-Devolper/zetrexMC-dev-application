@@ -1,0 +1,1264 @@
+# ==============================
+#   ShopGUIPlus - shops.yml
+#   Made for ZTRX Application
+#   7 Categories - Full Shop
+# ==============================
+
+shops:
+
+# ══════════════════════════════
+#       القائمة الرئيسية
+# ══════════════════════════════
+  main:
+    name: "&8[ &6🏪 المتجر الرئيسي &8]"
+    size: 54
+    item:
+      material: GOLD_BLOCK
+      name: "&6🏪 المتجر الرئيسي"
+    fillItem:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cإغلاق"
+    items:
+      1:
+        material: DIAMOND_SWORD
+        slot: 11
+        name: "&c⚔ قسم القتال"
+        lore:
+          - " "
+          - "&7اضغط لفتح قسم القتال"
+          - " "
+        buy-command: "shop combat"
+        buyPrice: 0
+      2:
+        material: BRICKS
+        slot: 12
+        name: "&7🪨 قسم البلوكات"
+        lore:
+          - " "
+          - "&7اضغط لفتح قسم البلوكات"
+          - " "
+        buy-command: "shop blocks"
+        buyPrice: 0
+      3:
+        material: BREAD
+        slot: 13
+        name: "&e🍎 قسم الأكل"
+        lore:
+          - " "
+          - "&7اضغط لفتح قسم الأكل"
+          - " "
+        buy-command: "shop food"
+        buyPrice: 0
+      4:
+        material: DIAMOND_PICKAXE
+        slot: 14
+        name: "&b⛏ قسم الأدوات"
+        lore:
+          - " "
+          - "&7اضغط لفتح قسم الأدوات"
+          - " "
+        buy-command: "shop tools"
+        buyPrice: 0
+      5:
+        material: DIAMOND
+        slot: 20
+        name: "&b💎 قسم الخامات"
+        lore:
+          - " "
+          - "&7اضغط لفتح قسم الخامات"
+          - " "
+        buy-command: "shop ores"
+        buyPrice: 0
+      6:
+        material: WHEAT
+        slot: 21
+        name: "&a🌿 قسم الزراعة"
+        lore:
+          - " "
+          - "&7اضغط لفتح قسم الزراعة"
+          - " "
+        buy-command: "shop farming"
+        buyPrice: 0
+      7:
+        material: POTION
+        slot: 22
+        name: "&5🧪 قسم الجرع"
+        lore:
+          - " "
+          - "&7اضغط لفتح قسم الجرع"
+          - " "
+        buy-command: "shop potions"
+        buyPrice: 0
+
+# ══════════════════════════════
+#         ⚔️ القتال
+# ══════════════════════════════
+  combat:
+    name: "&8[ &c⚔ قسم القتال &8]"
+    size: 54
+    fillItem:
+      material: RED_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cرجوع"
+    items:
+      1:
+        material: WOODEN_SWORD
+        slot: 10
+        name: "&fسيف خشب"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 10
+        sellPrice: 5
+      2:
+        material: STONE_SWORD
+        slot: 11
+        name: "&7سيف حجر"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 25
+        sellPrice: 12
+      3:
+        material: IRON_SWORD
+        slot: 12
+        name: "&fسيف حديد"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 80
+        sellPrice: 40
+      4:
+        material: GOLDEN_SWORD
+        slot: 13
+        name: "&eسيف ذهب"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 60
+        sellPrice: 30
+      5:
+        material: DIAMOND_SWORD
+        slot: 14
+        name: "&bسيف ديموند"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 500
+        sellPrice: 250
+      6:
+        material: NETHERITE_SWORD
+        slot: 15
+        name: "&8سيف نيثرايت"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 2000
+        sellPrice: 1000
+      7:
+        material: BOW
+        slot: 20
+        name: "&6قوس"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 50
+        sellPrice: 25
+      8:
+        material: CROSSBOW
+        slot: 21
+        name: "&6قوس صليبي"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 150
+        sellPrice: 75
+      9:
+        material: ARROW
+        slot: 22
+        quantity: 16
+        name: "&fسهام x16"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 20
+        sellPrice: 10
+      10:
+        material: SHIELD
+        slot: 23
+        name: "&7ترس"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 100
+        sellPrice: 50
+      11:
+        material: IRON_HELMET
+        slot: 29
+        name: "&7خوذة حديد"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 120
+        sellPrice: 60
+      12:
+        material: IRON_CHESTPLATE
+        slot: 30
+        name: "&7صدرية حديد"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 200
+        sellPrice: 100
+      13:
+        material: IRON_LEGGINGS
+        slot: 31
+        name: "&7سروال حديد"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 180
+        sellPrice: 90
+      14:
+        material: IRON_BOOTS
+        slot: 32
+        name: "&7حذاء حديد"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 100
+        sellPrice: 50
+      15:
+        material: DIAMOND_HELMET
+        slot: 33
+        name: "&bخوذة ديموند"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 800
+        sellPrice: 400
+      16:
+        material: DIAMOND_CHESTPLATE
+        slot: 38
+        name: "&bصدرية ديموند"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 1200
+        sellPrice: 600
+      17:
+        material: DIAMOND_LEGGINGS
+        slot: 39
+        name: "&bسروال ديموند"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 1000
+        sellPrice: 500
+      18:
+        material: DIAMOND_BOOTS
+        slot: 40
+        name: "&bحذاء ديموند"
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+        buyPrice: 700
+        sellPrice: 350
+
+# ══════════════════════════════
+#         🪨 البلوكات
+# ══════════════════════════════
+  blocks:
+    name: "&8[ &7🪨 قسم البلوكات &8]"
+    size: 54
+    fillItem:
+      material: GRAY_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cرجوع"
+    items:
+      1:
+        material: STONE
+        slot: 10
+        quantity: 64
+        name: "&7حجر x64"
+        buyPrice: 5
+        sellPrice: 2
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      2:
+        material: COBBLESTONE
+        slot: 11
+        quantity: 64
+        name: "&7كوبل x64"
+        buyPrice: 3
+        sellPrice: 1
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      3:
+        material: OAK_LOG
+        slot: 12
+        quantity: 32
+        name: "&6خشب بلوط x32"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      4:
+        material: BIRCH_LOG
+        slot: 13
+        quantity: 32
+        name: "&fخشب بتش x32"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      5:
+        material: DARK_OAK_LOG
+        slot: 14
+        quantity: 32
+        name: "&8خشب داكن x32"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      6:
+        material: SAND
+        slot: 15
+        quantity: 64
+        name: "&eرمل x64"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      7:
+        material: GRAVEL
+        slot: 20
+        quantity: 64
+        name: "&7حصى x64"
+        buyPrice: 6
+        sellPrice: 3
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      8:
+        material: GLASS
+        slot: 21
+        quantity: 32
+        name: "&fزجاج x32"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      9:
+        material: OBSIDIAN
+        slot: 22
+        quantity: 8
+        name: "&8أوبسيديان x8"
+        buyPrice: 200
+        sellPrice: 100
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      10:
+        material: NETHERRACK
+        slot: 23
+        quantity: 64
+        name: "&cنيثرراك x64"
+        buyPrice: 5
+        sellPrice: 2
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      11:
+        material: END_STONE
+        slot: 24
+        quantity: 32
+        name: "&eحجر الإند x32"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      12:
+        material: BRICKS
+        slot: 29
+        quantity: 32
+        name: "&cطوب x32"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      13:
+        material: DIRT
+        slot: 30
+        quantity: 64
+        name: "&6تراب x64"
+        buyPrice: 2
+        sellPrice: 1
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════
+#         🍎 الأكل
+# ══════════════════════════════
+  food:
+    name: "&8[ &e🍎 قسم الأكل &8]"
+    size: 54
+    fillItem:
+      material: YELLOW_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cرجوع"
+    items:
+      1:
+        material: BREAD
+        slot: 10
+        quantity: 32
+        name: "&6خبز x32"
+        buyPrice: 20
+        sellPrice: 8
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      2:
+        material: COOKED_BEEF
+        slot: 11
+        quantity: 16
+        name: "&clore steak x16"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      3:
+        material: COOKED_CHICKEN
+        slot: 12
+        quantity: 16
+        name: "&fدجاج مطبوخ x16"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      4:
+        material: COOKED_PORKCHOP
+        slot: 13
+        quantity: 16
+        name: "&flحم خنزير x16"
+        buyPrice: 35
+        sellPrice: 17
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      5:
+        material: GOLDEN_APPLE
+        slot: 14
+        quantity: 4
+        name: "&eتفاحة ذهبية x4"
+        buyPrice: 200
+        sellPrice: 0
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&cغير قابلة للبيع"
+          - " "
+      6:
+        material: ENCHANTED_GOLDEN_APPLE
+        slot: 15
+        quantity: 1
+        name: "&6تفاحة إنشانتيد"
+        buyPrice: 1500
+        sellPrice: 0
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&cغير قابلة للبيع"
+          - " "
+      7:
+        material: COOKED_SALMON
+        slot: 20
+        quantity: 16
+        name: "&bسمك سلمون x16"
+        buyPrice: 35
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      8:
+        material: COOKIE
+        slot: 21
+        quantity: 32
+        name: "&6كوكيز x32"
+        buyPrice: 15
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      9:
+        material: PUMPKIN_PIE
+        slot: 22
+        quantity: 8
+        name: "&6فطيرة قرع x8"
+        buyPrice: 25
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════
+#         ⛏️ الأدوات
+# ══════════════════════════════
+  tools:
+    name: "&8[ &b⛏ قسم الأدوات &8]"
+    size: 54
+    fillItem:
+      material: CYAN_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cرجوع"
+    items:
+      1:
+        material: WOODEN_PICKAXE
+        slot: 10
+        name: "&fمعول خشب"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      2:
+        material: STONE_PICKAXE
+        slot: 11
+        name: "&7معول حجر"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      3:
+        material: IRON_PICKAXE
+        slot: 12
+        name: "&fمعول حديد"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      4:
+        material: DIAMOND_PICKAXE
+        slot: 13
+        name: "&bمعول ديموند"
+        buyPrice: 600
+        sellPrice: 300
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      5:
+        material: NETHERITE_PICKAXE
+        slot: 14
+        name: "&8معول نيثرايت"
+        buyPrice: 2500
+        sellPrice: 1200
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      6:
+        material: IRON_AXE
+        slot: 20
+        name: "&fفأس حديد"
+        buyPrice: 90
+        sellPrice: 45
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      7:
+        material: DIAMOND_AXE
+        slot: 21
+        name: "&bفأس ديموند"
+        buyPrice: 550
+        sellPrice: 275
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      8:
+        material: IRON_SHOVEL
+        slot: 22
+        name: "&fمجرفة حديد"
+        buyPrice: 70
+        sellPrice: 35
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      9:
+        material: DIAMOND_SHOVEL
+        slot: 23
+        name: "&bمجرفة ديموند"
+        buyPrice: 450
+        sellPrice: 225
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      10:
+        material: FISHING_ROD
+        slot: 24
+        name: "&6صنارة صيد"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      11:
+        material: FLINT_AND_STEEL
+        slot: 29
+        name: "&cحجر نار"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      12:
+        material: SHEARS
+        slot: 30
+        name: "&7مقص"
+        buyPrice: 50
+        sellPrice: 25
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════
+#         💎 الخامات
+# ══════════════════════════════
+  ores:
+    name: "&8[ &b💎 قسم الخامات &8]"
+    size: 54
+    fillItem:
+      material: BLUE_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cرجوع"
+    items:
+      1:
+        material: COAL
+        slot: 10
+        quantity: 16
+        name: "&8فحم x16"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      2:
+        material: IRON_INGOT
+        slot: 11
+        quantity: 8
+        name: "&7حديد x8"
+        buyPrice: 50
+        sellPrice: 25
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      3:
+        material: COPPER_INGOT
+        slot: 12
+        quantity: 8
+        name: "&6نحاس x8"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      4:
+        material: GOLD_INGOT
+        slot: 13
+        quantity: 4
+        name: "&eذهب x4"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      5:
+        material: DIAMOND
+        slot: 14
+        quantity: 1
+        name: "&bجوهرة"
+        buyPrice: 500
+        sellPrice: 250
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      6:
+        material: EMERALD
+        slot: 15
+        quantity: 1
+        name: "&aزمرد"
+        buyPrice: 400
+        sellPrice: 200
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      7:
+        material: LAPIS_LAZULI
+        slot: 20
+        quantity: 16
+        name: "&9لازورد x16"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      8:
+        material: REDSTONE
+        slot: 21
+        quantity: 16
+        name: "&cريدستون x16"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      9:
+        material: QUARTZ
+        slot: 22
+        quantity: 8
+        name: "&fكوارتز x8"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      10:
+        material: NETHERITE_INGOT
+        slot: 23
+        quantity: 1
+        name: "&8نيثرايت"
+        buyPrice: 2000
+        sellPrice: 1000
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      11:
+        material: AMETHYST_SHARD
+        slot: 24
+        quantity: 8
+        name: "&dأميثيست x8"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════
+#         🌿 الزراعة
+# ══════════════════════════════
+  farming:
+    name: "&8[ &a🌿 قسم الزراعة &8]"
+    size: 54
+    fillItem:
+      material: GREEN_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cرجوع"
+    items:
+      1:
+        material: WHEAT_SEEDS
+        slot: 10
+        quantity: 32
+        name: "&ebذور قمح x32"
+        buyPrice: 5
+        sellPrice: 2
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      2:
+        material: WHEAT
+        slot: 11
+        quantity: 32
+        name: "&eقمح x32"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      3:
+        material: CARROT
+        slot: 12
+        quantity: 16
+        name: "&6جزر x16"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      4:
+        material: POTATO
+        slot: 13
+        quantity: 16
+        name: "&ebطاطا x16"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      5:
+        material: BEETROOT_SEEDS
+        slot: 14
+        quantity: 16
+        name: "&4بذور شمندر x16"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      6:
+        material: PUMPKIN
+        slot: 15
+        quantity: 8
+        name: "&6قرع x8"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      7:
+        material: MELON
+        slot: 20
+        quantity: 8
+        name: "&abطيخ x8"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      8:
+        material: SUGAR_CANE
+        slot: 21
+        quantity: 32
+        name: "&aqub سكر x32"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      9:
+        material: COCOA_BEANS
+        slot: 22
+        quantity: 16
+        name: "&6كاكاو x16"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+      10:
+        material: BONE_MEAL
+        slot: 23
+        quantity: 16
+        name: "&fسماد x16"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════
+#         🧪 الجرع
+# ══════════════════════════════
+  potions:
+    name: "&8[ &5🧪 قسم الجرع &8]"
+    size: 54
+    fillItem:
+      material: PURPLE_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7الصفحة السابقة"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7الصفحة التالية"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cرجوع"
+    items:
+      1:
+        material: POTION
+        slot: 10
+        name: "&aجرعة تعافي"
+        nbt: "{Potion:\"minecraft:healing\"}"
+        buyPrice: 80
+        sellPrice: 40
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7تعيد &c4 ❤ &7فوراً"
+          - " "
+      2:
+        material: POTION
+        slot: 11
+        name: "&cجرعة تعافي II"
+        nbt: "{Potion:\"minecraft:strong_healing\"}"
+        buyPrice: 150
+        sellPrice: 75
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7تعيد &c8 ❤ &7فوراً"
+          - " "
+      3:
+        material: POTION
+        slot: 12
+        name: "&bجرعة سرعة"
+        nbt: "{Potion:\"minecraft:swiftness\"}"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7سرعة لمدة &b3 دقائق"
+          - " "
+      4:
+        material: POTION
+        slot: 13
+        name: "&cجرعة قوة"
+        nbt: "{Potion:\"minecraft:strength\"}"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7قوة ضرب لمدة &c3 دقائق"
+          - " "
+      5:
+        material: POTION
+        slot: 14
+        name: "&7جرعة تنفس"
+        nbt: "{Potion:\"minecraft:water_breathing\"}"
+        buyPrice: 70
+        sellPrice: 35
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7تتنفس تحت الماء &73 دقائق"
+          - " "
+      6:
+        material: POTION
+        slot: 15
+        name: "&eجرعة قفز"
+        nbt: "{Potion:\"minecraft:leaping\"}"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7قفز عالي لمدة &e3 دقائق"
+          - " "
+      7:
+        material: SPLASH_POTION
+        slot: 20
+        name: "&4جرعة ضرر رمي"
+        nbt: "{Potion:\"minecraft:harming\"}"
+        buyPrice: 120
+        sellPrice: 60
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7تضر الأعداء عند الرمي"
+          - " "
+      8:
+        material: POTION
+        slot: 21
+        name: "&5جرعة تخفي"
+        nbt: "{Potion:\"minecraft:invisibility\"}"
+        buyPrice: 200
+        sellPrice: 100
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7تختفي لمدة &53 دقائق"
+          - " "
+      9:
+        material: POTION
+        slot: 22
+        name: "&ahoma جرعة نار"
+        nbt: "{Potion:\"minecraft:fire_resistance\"}"
+        buyPrice: 90
+        sellPrice: 45
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7مقاومة النار لمدة &c3 دقائق"
+          - " "
+      10:
+        material: POTION
+        slot: 23
+        name: "&2جرعة تجديد"
+        nbt: "{Potion:\"minecraft:regeneration\"}"
+        buyPrice: 130
+        sellPrice: 65
+        lore:
+          - " "
+          - "&7الشراء: &a$%buy_price%"
+          - "&7البيع: &c$%sell_price%"
+          - "&7تجدد الصحة لمدة &a45 ثانية"
+          - " "
+```
+
+---
+
+## 📁 وين تحطه
+```
+plugins/
+└── ShopGUIPlus/
+    └── shops/
+        └── shops.yml
+```
+
+ثم:
+```
+/shopguiplus reload
