@@ -1,0 +1,2587 @@
+# ======================================================
+#   ShopGUIPlus - shops.yml
+#   Made for ZetrexMC Application
+#   Categories: Armor, Blocks, Ores, Potions,
+#               Combat, Farming, Misc, Food, Tools
+# ======================================================
+
+shops:
+
+# ══════════════════════════════════════════════════════
+#                    MAIN MENU
+# ══════════════════════════════════════════════════════
+  main:
+    name: "&8[ &6🏪 ZetrexMC Shop &8]"
+    size: 54
+    item:
+      material: GOLD_BLOCK
+      name: "&6🏪 Main Shop"
+    fillItem:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cClose"
+    items:
+      1:
+        material: DIAMOND_CHESTPLATE
+        slot: 19
+        name: "&b🛡 Armor"
+        lore:
+          - " "
+          - "&7All types of armor"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop armor"
+        buyPrice: 0
+      2:
+        material: BRICKS
+        slot: 20
+        name: "&7🪨 Blocks"
+        lore:
+          - " "
+          - "&7Building blocks"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop blocks"
+        buyPrice: 0
+      3:
+        material: DIAMOND
+        slot: 21
+        name: "&b💎 Ores & Materials"
+        lore:
+          - " "
+          - "&7All ores and materials"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop ores"
+        buyPrice: 0
+      4:
+        material: POTION
+        slot: 22
+        name: "&5🧪 Potions"
+        lore:
+          - " "
+          - "&7All types of potions"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop potions"
+        buyPrice: 0
+      5:
+        material: DIAMOND_SWORD
+        slot: 23
+        name: "&c🏹 Combat & Weapons"
+        lore:
+          - " "
+          - "&7Swords, Bows, Axes"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop combat"
+        buyPrice: 0
+      6:
+        material: WHEAT
+        slot: 28
+        name: "&a🌿 Farming & Nature"
+        lore:
+          - " "
+          - "&7Seeds, Crops, Saplings"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop farming"
+        buyPrice: 0
+      7:
+        material: FISHING_ROD
+        slot: 29
+        name: "&3🎣 Misc & Special"
+        lore:
+          - " "
+          - "&7Special items"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop misc"
+        buyPrice: 0
+      8:
+        material: BREAD
+        slot: 30
+        name: "&e🍎 Food"
+        lore:
+          - " "
+          - "&7All food items"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop food"
+        buyPrice: 0
+      9:
+        material: DIAMOND_PICKAXE
+        slot: 31
+        name: "&b⛏ Tools"
+        lore:
+          - " "
+          - "&7Pickaxes, Axes, Shovels"
+          - "&eClick to open!"
+          - " "
+        buy-command: "shop tools"
+        buyPrice: 0
+
+# ══════════════════════════════════════════════════════
+#                   🛡️ ARMOR
+# ══════════════════════════════════════════════════════
+  armor:
+    name: "&8[ &b🛡 Armor Shop &8]"
+    size: 54
+    fillItem:
+      material: CYAN_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: LEATHER_HELMET
+        slot: 10
+        name: "&6Leather Helmet"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 20
+        sellPrice: 10
+      2:
+        material: LEATHER_CHESTPLATE
+        slot: 11
+        name: "&6Leather Chestplate"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 30
+        sellPrice: 15
+      3:
+        material: LEATHER_LEGGINGS
+        slot: 12
+        name: "&6Leather Leggings"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 25
+        sellPrice: 12
+      4:
+        material: LEATHER_BOOTS
+        slot: 13
+        name: "&6Leather Boots"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 20
+        sellPrice: 10
+      5:
+        material: CHAINMAIL_HELMET
+        slot: 14
+        name: "&7Chainmail Helmet"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 80
+        sellPrice: 40
+      6:
+        material: CHAINMAIL_CHESTPLATE
+        slot: 15
+        name: "&7Chainmail Chestplate"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 130
+        sellPrice: 65
+      7:
+        material: CHAINMAIL_LEGGINGS
+        slot: 16
+        name: "&7Chainmail Leggings"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 110
+        sellPrice: 55
+      8:
+        material: CHAINMAIL_BOOTS
+        slot: 17
+        name: "&7Chainmail Boots"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 70
+        sellPrice: 35
+      9:
+        material: IRON_HELMET
+        slot: 19
+        name: "&7Iron Helmet"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 120
+        sellPrice: 60
+      10:
+        material: IRON_CHESTPLATE
+        slot: 20
+        name: "&7Iron Chestplate"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 200
+        sellPrice: 100
+      11:
+        material: IRON_LEGGINGS
+        slot: 21
+        name: "&7Iron Leggings"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 180
+        sellPrice: 90
+      12:
+        material: IRON_BOOTS
+        slot: 22
+        name: "&7Iron Boots"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 100
+        sellPrice: 50
+      13:
+        material: GOLDEN_HELMET
+        slot: 23
+        name: "&eGold Helmet"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 100
+        sellPrice: 50
+      14:
+        material: GOLDEN_CHESTPLATE
+        slot: 24
+        name: "&eGold Chestplate"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 160
+        sellPrice: 80
+      15:
+        material: GOLDEN_LEGGINGS
+        slot: 25
+        name: "&eGold Leggings"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 140
+        sellPrice: 70
+      16:
+        material: GOLDEN_BOOTS
+        slot: 26
+        name: "&eGold Boots"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 90
+        sellPrice: 45
+      17:
+        material: DIAMOND_HELMET
+        slot: 28
+        name: "&bDiamond Helmet"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 800
+        sellPrice: 400
+      18:
+        material: DIAMOND_CHESTPLATE
+        slot: 29
+        name: "&bDiamond Chestplate"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 1200
+        sellPrice: 600
+      19:
+        material: DIAMOND_LEGGINGS
+        slot: 30
+        name: "&bDiamond Leggings"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 1000
+        sellPrice: 500
+      20:
+        material: DIAMOND_BOOTS
+        slot: 31
+        name: "&bDiamond Boots"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 700
+        sellPrice: 350
+      21:
+        material: NETHERITE_HELMET
+        slot: 32
+        name: "&8Netherite Helmet"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 3000
+        sellPrice: 1500
+      22:
+        material: NETHERITE_CHESTPLATE
+        slot: 33
+        name: "&8Netherite Chestplate"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 4500
+        sellPrice: 2250
+      23:
+        material: NETHERITE_LEGGINGS
+        slot: 34
+        name: "&8Netherite Leggings"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 4000
+        sellPrice: 2000
+      24:
+        material: NETHERITE_BOOTS
+        slot: 35
+        name: "&8Netherite Boots"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 2500
+        sellPrice: 1250
+      25:
+        material: SHIELD
+        slot: 37
+        name: "&7Shield"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 150
+        sellPrice: 75
+      26:
+        material: TURTLE_HELMET
+        slot: 38
+        name: "&aTurtle Helmet"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+        buyPrice: 500
+        sellPrice: 250
+      27:
+        material: ELYTRA
+        slot: 39
+        name: "&dElytra"
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&cNot sellable"
+          - " "
+        buyPrice: 10000
+        sellPrice: 0
+
+# ══════════════════════════════════════════════════════
+#                   🪨 BLOCKS
+# ══════════════════════════════════════════════════════
+  blocks:
+    name: "&8[ &7🪨 Blocks Shop &8]"
+    size: 54
+    fillItem:
+      material: GRAY_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: STONE
+        slot: 10
+        quantity: 64
+        name: "&7Stone x64"
+        buyPrice: 5
+        sellPrice: 2
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      2:
+        material: COBBLESTONE
+        slot: 11
+        quantity: 64
+        name: "&7Cobblestone x64"
+        buyPrice: 3
+        sellPrice: 1
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      3:
+        material: STONE_BRICKS
+        slot: 12
+        quantity: 32
+        name: "&7Stone Bricks x32"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      4:
+        material: BRICKS
+        slot: 13
+        quantity: 32
+        name: "&cBricks x32"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      5:
+        material: OAK_LOG
+        slot: 14
+        quantity: 32
+        name: "&6Oak Log x32"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      6:
+        material: BIRCH_LOG
+        slot: 15
+        quantity: 32
+        name: "&fBirch Log x32"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      7:
+        material: SPRUCE_LOG
+        slot: 20
+        quantity: 32
+        name: "&6Spruce Log x32"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      8:
+        material: JUNGLE_LOG
+        slot: 21
+        quantity: 32
+        name: "&6Jungle Log x32"
+        buyPrice: 22
+        sellPrice: 11
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      9:
+        material: DARK_OAK_LOG
+        slot: 22
+        quantity: 32
+        name: "&8Dark Oak Log x32"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      10:
+        material: ACACIA_LOG
+        slot: 23
+        quantity: 32
+        name: "&6Acacia Log x32"
+        buyPrice: 22
+        sellPrice: 11
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      11:
+        material: MANGROVE_LOG
+        slot: 24
+        quantity: 32
+        name: "&4Mangrove Log x32"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      12:
+        material: CHERRY_LOG
+        slot: 25
+        quantity: 32
+        name: "&dCherry Log x32"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      13:
+        material: SAND
+        slot: 28
+        quantity: 64
+        name: "&eSand x64"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      14:
+        material: RED_SAND
+        slot: 29
+        quantity: 64
+        name: "&cRed Sand x64"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      15:
+        material: GRAVEL
+        slot: 30
+        quantity: 64
+        name: "&7Gravel x64"
+        buyPrice: 6
+        sellPrice: 3
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      16:
+        material: DIRT
+        slot: 31
+        quantity: 64
+        name: "&6Dirt x64"
+        buyPrice: 2
+        sellPrice: 1
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      17:
+        material: GLASS
+        slot: 32
+        quantity: 32
+        name: "&fGlass x32"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      18:
+        material: OBSIDIAN
+        slot: 33
+        quantity: 8
+        name: "&8Obsidian x8"
+        buyPrice: 200
+        sellPrice: 100
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      19:
+        material: NETHERRACK
+        slot: 34
+        quantity: 64
+        name: "&cNetherrack x64"
+        buyPrice: 5
+        sellPrice: 2
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      20:
+        material: END_STONE
+        slot: 35
+        quantity: 32
+        name: "&eEnd Stone x32"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      21:
+        material: DEEPSLATE
+        slot: 37
+        quantity: 64
+        name: "&8Deepslate x64"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      22:
+        material: BLACKSTONE
+        slot: 38
+        quantity: 32
+        name: "&8Blackstone x32"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      23:
+        material: BASALT
+        slot: 39
+        quantity: 32
+        name: "&8Basalt x32"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      24:
+        material: WHITE_CONCRETE
+        slot: 40
+        quantity: 32
+        name: "&fWhite Concrete x32"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      25:
+        material: RED_CONCRETE
+        slot: 41
+        quantity: 32
+        name: "&cRed Concrete x32"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      26:
+        material: BLUE_CONCRETE
+        slot: 42
+        quantity: 32
+        name: "&9Blue Concrete x32"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      27:
+        material: BLACK_CONCRETE
+        slot: 43
+        quantity: 32
+        name: "&8Black Concrete x32"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      28:
+        material: WHITE_WOOL
+        slot: 16
+        quantity: 32
+        name: "&fWhite Wool x32"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      29:
+        material: WHITE_TERRACOTTA
+        slot: 17
+        quantity: 32
+        name: "&fWhite Terracotta x32"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════════════════════════════
+#                💎 ORES & MATERIALS
+# ══════════════════════════════════════════════════════
+  ores:
+    name: "&8[ &b💎 Ores & Materials &8]"
+    size: 54
+    fillItem:
+      material: BLUE_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: COAL
+        slot: 10
+        quantity: 16
+        name: "&8Coal x16"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      2:
+        material: RAW_IRON
+        slot: 11
+        quantity: 8
+        name: "&7Raw Iron x8"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      3:
+        material: IRON_INGOT
+        slot: 12
+        quantity: 8
+        name: "&7Iron Ingot x8"
+        buyPrice: 50
+        sellPrice: 25
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      4:
+        material: RAW_COPPER
+        slot: 13
+        quantity: 8
+        name: "&6Raw Copper x8"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      5:
+        material: COPPER_INGOT
+        slot: 14
+        quantity: 8
+        name: "&6Copper Ingot x8"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      6:
+        material: RAW_GOLD
+        slot: 15
+        quantity: 4
+        name: "&eRaw Gold x4"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      7:
+        material: GOLD_INGOT
+        slot: 20
+        quantity: 4
+        name: "&eGold Ingot x4"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      8:
+        material: DIAMOND
+        slot: 21
+        quantity: 1
+        name: "&bDiamond"
+        buyPrice: 500
+        sellPrice: 250
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      9:
+        material: EMERALD
+        slot: 22
+        quantity: 1
+        name: "&aEmerald"
+        buyPrice: 400
+        sellPrice: 200
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      10:
+        material: LAPIS_LAZULI
+        slot: 23
+        quantity: 16
+        name: "&9Lapis Lazuli x16"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      11:
+        material: REDSTONE
+        slot: 24
+        quantity: 16
+        name: "&cRedstone x16"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      12:
+        material: QUARTZ
+        slot: 29
+        quantity: 8
+        name: "&fQuartz x8"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      13:
+        material: NETHERITE_INGOT
+        slot: 30
+        quantity: 1
+        name: "&8Netherite Ingot"
+        buyPrice: 2000
+        sellPrice: 1000
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      14:
+        material: NETHERITE_SCRAP
+        slot: 31
+        quantity: 1
+        name: "&8Netherite Scrap"
+        buyPrice: 400
+        sellPrice: 200
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      15:
+        material: AMETHYST_SHARD
+        slot: 32
+        quantity: 8
+        name: "&dAmethyst Shard x8"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      16:
+        material: GLOWSTONE_DUST
+        slot: 33
+        quantity: 16
+        name: "&eGlowstone Dust x16"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      17:
+        material: BLAZE_ROD
+        slot: 38
+        quantity: 4
+        name: "&6Blaze Rod x4"
+        buyPrice: 80
+        sellPrice: 40
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      18:
+        material: ENDER_PEARL
+        slot: 39
+        quantity: 4
+        name: "&5Ender Pearl x4"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      19:
+        material: ENDER_EYE
+        slot: 40
+        quantity: 2
+        name: "&5Eye of Ender x2"
+        buyPrice: 150
+        sellPrice: 75
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      20:
+        material: NETHER_STAR
+        slot: 41
+        quantity: 1
+        name: "&fNether Star"
+        buyPrice: 5000
+        sellPrice: 2500
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      21:
+        material: PRISMARINE_CRYSTALS
+        slot: 42
+        quantity: 8
+        name: "&bPrismarine Crystals x8"
+        buyPrice: 35
+        sellPrice: 17
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      22:
+        material: PRISMARINE_SHARD
+        slot: 43
+        quantity: 8
+        name: "&bPrismarine Shard x8"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════════════════════════════
+#                   🧪 POTIONS
+# ══════════════════════════════════════════════════════
+  potions:
+    name: "&8[ &5🧪 Potions Shop &8]"
+    size: 54
+    fillItem:
+      material: PURPLE_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: POTION
+        slot: 10
+        name: "&aHealing Potion"
+        nbt: "{Potion:\"minecraft:healing\"}"
+        buyPrice: 80
+        sellPrice: 40
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Restores &c4 ❤ instantly"
+          - " "
+      2:
+        material: POTION
+        slot: 11
+        name: "&cHealing Potion II"
+        nbt: "{Potion:\"minecraft:strong_healing\"}"
+        buyPrice: 150
+        sellPrice: 75
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Restores &c8 ❤ instantly"
+          - " "
+      3:
+        material: POTION
+        slot: 12
+        name: "&bSwiftness Potion"
+        nbt: "{Potion:\"minecraft:swiftness\"}"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Speed for 3 minutes"
+          - " "
+      4:
+        material: POTION
+        slot: 13
+        name: "&cStrength Potion"
+        nbt: "{Potion:\"minecraft:strength\"}"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Bonus damage for 3 minutes"
+          - " "
+      5:
+        material: POTION
+        slot: 14
+        name: "&9Water Breathing"
+        nbt: "{Potion:\"minecraft:water_breathing\"}"
+        buyPrice: 70
+        sellPrice: 35
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Breathe underwater 3 minutes"
+          - " "
+      6:
+        material: POTION
+        slot: 15
+        name: "&eLeaping Potion"
+        nbt: "{Potion:\"minecraft:leaping\"}"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Jump higher for 3 minutes"
+          - " "
+      7:
+        material: POTION
+        slot: 20
+        name: "&5Invisibility Potion"
+        nbt: "{Potion:\"minecraft:invisibility\"}"
+        buyPrice: 200
+        sellPrice: 100
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Invisible for 3 minutes"
+          - " "
+      8:
+        material: POTION
+        slot: 21
+        name: "&cFire Resistance"
+        nbt: "{Potion:\"minecraft:fire_resistance\"}"
+        buyPrice: 90
+        sellPrice: 45
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Fire immunity for 3 minutes"
+          - " "
+      9:
+        material: POTION
+        slot: 22
+        name: "&2Regeneration Potion"
+        nbt: "{Potion:\"minecraft:regeneration\"}"
+        buyPrice: 130
+        sellPrice: 65
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Regenerate health for 45 seconds"
+          - " "
+      10:
+        material: POTION
+        slot: 23
+        name: "&7Night Vision"
+        nbt: "{Potion:\"minecraft:night_vision\"}"
+        buyPrice: 75
+        sellPrice: 37
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7See in the dark for 3 minutes"
+          - " "
+      11:
+        material: SPLASH_POTION
+        slot: 29
+        name: "&4Splash Harming II"
+        nbt: "{Potion:\"minecraft:strong_harming\"}"
+        buyPrice: 180
+        sellPrice: 90
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Damages enemies on impact"
+          - " "
+      12:
+        material: POTION
+        slot: 30
+        name: "&bStrength Potion II"
+        nbt: "{Potion:\"minecraft:strong_strength\"}"
+        buyPrice: 200
+        sellPrice: 100
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Major damage boost for 3 minutes"
+          - " "
+      13:
+        material: POTION
+        slot: 31
+        name: "&aSwiftness Potion II"
+        nbt: "{Potion:\"minecraft:strong_swiftness\"}"
+        buyPrice: 120
+        sellPrice: 60
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Major speed boost for 3 minutes"
+          - " "
+      14:
+        material: POTION
+        slot: 32
+        name: "&aSlow Falling"
+        nbt: "{Potion:\"minecraft:slow_falling\"}"
+        buyPrice: 85
+        sellPrice: 42
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Fall slowly for 90 seconds"
+          - " "
+      15:
+        material: POTION
+        slot: 33
+        name: "&9Turtle Master"
+        nbt: "{Potion:\"minecraft:turtle_master\"}"
+        buyPrice: 160
+        sellPrice: 80
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - "&7Slowness + Resistance"
+          - " "
+
+# ══════════════════════════════════════════════════════
+#               🏹 COMBAT & WEAPONS
+# ══════════════════════════════════════════════════════
+  combat:
+    name: "&8[ &c🏹 Combat & Weapons &8]"
+    size: 54
+    fillItem:
+      material: RED_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: WOODEN_SWORD
+        slot: 10
+        name: "&6Wooden Sword"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      2:
+        material: STONE_SWORD
+        slot: 11
+        name: "&7Stone Sword"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      3:
+        material: IRON_SWORD
+        slot: 12
+        name: "&fIron Sword"
+        buyPrice: 80
+        sellPrice: 40
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      4:
+        material: GOLDEN_SWORD
+        slot: 13
+        name: "&eGolden Sword"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      5:
+        material: DIAMOND_SWORD
+        slot: 14
+        name: "&bDiamond Sword"
+        buyPrice: 500
+        sellPrice: 250
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      6:
+        material: NETHERITE_SWORD
+        slot: 15
+        name: "&8Netherite Sword"
+        buyPrice: 2000
+        sellPrice: 1000
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      7:
+        material: BOW
+        slot: 20
+        name: "&6Bow"
+        buyPrice: 50
+        sellPrice: 25
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      8:
+        material: CROSSBOW
+        slot: 21
+        name: "&6Crossbow"
+        buyPrice: 150
+        sellPrice: 75
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      9:
+        material: ARROW
+        slot: 22
+        quantity: 64
+        name: "&fArrows x64"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      10:
+        material: SPECTRAL_ARROW
+        slot: 23
+        quantity: 16
+        name: "&eSpectral Arrow x16"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      11:
+        material: IRON_AXE
+        slot: 29
+        name: "&fIron Axe"
+        buyPrice: 90
+        sellPrice: 45
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      12:
+        material: DIAMOND_AXE
+        slot: 30
+        name: "&bDiamond Axe"
+        buyPrice: 550
+        sellPrice: 275
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      13:
+        material: NETHERITE_AXE
+        slot: 31
+        name: "&8Netherite Axe"
+        buyPrice: 2200
+        sellPrice: 1100
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      14:
+        material: TNT
+        slot: 32
+        quantity: 4
+        name: "&cTNT x4"
+        buyPrice: 200
+        sellPrice: 100
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      15:
+        material: FLINT_AND_STEEL
+        slot: 33
+        name: "&cFlint and Steel"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      16:
+        material: TRIDENT
+        slot: 38
+        name: "&bTrident"
+        buyPrice: 3000
+        sellPrice: 1500
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      17:
+        material: MACE
+        slot: 39
+        name: "&6Mace"
+        buyPrice: 4000
+        sellPrice: 2000
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════════════════════════════
+#               🌿 FARMING & NATURE
+# ══════════════════════════════════════════════════════
+  farming:
+    name: "&8[ &a🌿 Farming & Nature &8]"
+    size: 54
+    fillItem:
+      material: GREEN_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: WHEAT_SEEDS
+        slot: 10
+        quantity: 32
+        name: "&eWheat Seeds x32"
+        buyPrice: 5
+        sellPrice: 2
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      2:
+        material: WHEAT
+        slot: 11
+        quantity: 32
+        name: "&eWheat x32"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      3:
+        material: CARROT
+        slot: 12
+        quantity: 16
+        name: "&6Carrot x16"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      4:
+        material: POTATO
+        slot: 13
+        quantity: 16
+        name: "&ePotato x16"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      5:
+        material: BEETROOT_SEEDS
+        slot: 14
+        quantity: 16
+        name: "&4Beetroot Seeds x16"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      6:
+        material: PUMPKIN
+        slot: 15
+        quantity: 8
+        name: "&6Pumpkin x8"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      7:
+        material: MELON_SLICE
+        slot: 20
+        quantity: 16
+        name: "&aWatermelon x16"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      8:
+        material: SUGAR_CANE
+        slot: 21
+        quantity: 32
+        name: "&aSugar Cane x32"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      9:
+        material: COCOA_BEANS
+        slot: 22
+        quantity: 16
+        name: "&6Cocoa Beans x16"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      10:
+        material: BONE_MEAL
+        slot: 23
+        quantity: 16
+        name: "&fBone Meal x16"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      11:
+        material: OAK_SAPLING
+        slot: 24
+        quantity: 8
+        name: "&aOak Sapling x8"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      12:
+        material: BAMBOO
+        slot: 29
+        quantity: 16
+        name: "&aBamboo x16"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      13:
+        material: LILY_PAD
+        slot: 30
+        quantity: 8
+        name: "&aLily Pad x8"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      14:
+        material: NETHER_WART
+        slot: 31
+        quantity: 8
+        name: "&cNether Wart x8"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      15:
+        material: CHORUS_FRUIT
+        slot: 32
+        quantity: 8
+        name: "&5Chorus Fruit x8"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      16:
+        material: SWEET_BERRIES
+        slot: 33
+        quantity: 16
+        name: "&cSweet Berries x16"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      17:
+        material: GLOW_BERRIES
+        slot: 38
+        quantity: 16
+        name: "&6Glow Berries x16"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      18:
+        material: KELP
+        slot: 39
+        quantity: 16
+        name: "&aKelp x16"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      19:
+        material: TORCHFLOWER_SEEDS
+        slot: 40
+        quantity: 8
+        name: "&6Torchflower Seeds x8"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════════════════════════════
+#               🎣 MISC & SPECIAL
+# ══════════════════════════════════════════════════════
+  misc:
+    name: "&8[ &3🎣 Misc & Special &8]"
+    size: 54
+    fillItem:
+      material: CYAN_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: FISHING_ROD
+        slot: 10
+        name: "&3Fishing Rod"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      2:
+        material: NAME_TAG
+        slot: 11
+        name: "&fName Tag"
+        buyPrice: 300
+        sellPrice: 150
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      3:
+        material: SADDLE
+        slot: 12
+        name: "&6Saddle"
+        buyPrice: 250
+        sellPrice: 125
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      4:
+        material: LEAD
+        slot: 13
+        name: "&6Lead"
+        buyPrice: 50
+        sellPrice: 25
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      5:
+        material: COMPASS
+        slot: 14
+        name: "&fCompass"
+        buyPrice: 80
+        sellPrice: 40
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      6:
+        material: CLOCK
+        slot: 15
+        name: "&eClock"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      7:
+        material: BOOK
+        slot: 20
+        name: "&fBook"
+        buyPrice: 20
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      8:
+        material: ENCHANTED_BOOK
+        slot: 21
+        name: "&5Enchanted Book"
+        buyPrice: 500
+        sellPrice: 250
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      9:
+        material: EXPERIENCE_BOTTLE
+        slot: 22
+        quantity: 8
+        name: "&aXP Bottle x8"
+        buyPrice: 150
+        sellPrice: 75
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      10:
+        material: TOTEM_OF_UNDYING
+        slot: 23
+        name: "&6Totem of Undying"
+        buyPrice: 5000
+        sellPrice: 2500
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      11:
+        material: SHULKER_BOX
+        slot: 24
+        name: "&5Shulker Box"
+        buyPrice: 800
+        sellPrice: 400
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      12:
+        material: BEACON
+        slot: 29
+        name: "&fBeacon"
+        buyPrice: 8000
+        sellPrice: 4000
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      13:
+        material: DRAGON_EGG
+        slot: 30
+        name: "&5Dragon Egg"
+        buyPrice: 50000
+        sellPrice: 0
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&cNot sellable"
+          - " "
+      14:
+        material: HEART_OF_THE_SEA
+        slot: 31
+        name: "&bHeart of the Sea"
+        buyPrice: 3000
+        sellPrice: 1500
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      15:
+        material: NAUTILUS_SHELL
+        slot: 32
+        name: "&bNautilus Shell"
+        buyPrice: 500
+        sellPrice: 250
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      16:
+        material: SPONGE
+        slot: 33
+        name: "&eSponge"
+        buyPrice: 400
+        sellPrice: 200
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      17:
+        material: HONEY_BOTTLE
+        slot: 38
+        quantity: 4
+        name: "&6Honey Bottle x4"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      18:
+        material: SPYGLASS
+        slot: 39
+        name: "&7Spyglass"
+        buyPrice: 200
+        sellPrice: 100
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      19:
+        material: BUNDLE
+        slot: 40
+        name: "&6Bundle"
+        buyPrice: 300
+        sellPrice: 150
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      20:
+        material: LODESTONE
+        slot: 41
+        name: "&7Lodestone"
+        buyPrice: 500
+        sellPrice: 250
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════════════════════════════
+#                   🍎 FOOD
+# ══════════════════════════════════════════════════════
+  food:
+    name: "&8[ &e🍎 Food Shop &8]"
+    size: 54
+    fillItem:
+      material: YELLOW_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: BREAD
+        slot: 10
+        quantity: 32
+        name: "&6Bread x32"
+        buyPrice: 20
+        sellPrice: 8
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      2:
+        material: COOKED_BEEF
+        slot: 11
+        quantity: 16
+        name: "&cSteak x16"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      3:
+        material: COOKED_CHICKEN
+        slot: 12
+        quantity: 16
+        name: "&fCooked Chicken x16"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      4:
+        material: COOKED_PORKCHOP
+        slot: 13
+        quantity: 16
+        name: "&fPork Chop x16"
+        buyPrice: 35
+        sellPrice: 17
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      5:
+        material: COOKED_MUTTON
+        slot: 14
+        quantity: 16
+        name: "&fCooked Mutton x16"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      6:
+        material: COOKED_RABBIT
+        slot: 15
+        quantity: 16
+        name: "&6Cooked Rabbit x16"
+        buyPrice: 35
+        sellPrice: 17
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      7:
+        material: COOKED_SALMON
+        slot: 20
+        quantity: 16
+        name: "&bCooked Salmon x16"
+        buyPrice: 35
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      8:
+        material: COOKED_COD
+        slot: 21
+        quantity: 16
+        name: "&fCooked Cod x16"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      9:
+        material: GOLDEN_APPLE
+        slot: 22
+        quantity: 4
+        name: "&eGolden Apple x4"
+        buyPrice: 200
+        sellPrice: 0
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&cNot sellable"
+          - " "
+      10:
+        material: ENCHANTED_GOLDEN_APPLE
+        slot: 23
+        quantity: 1
+        name: "&6Enchanted Golden Apple"
+        buyPrice: 1500
+        sellPrice: 0
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&cNot sellable"
+          - " "
+      11:
+        material: COOKIE
+        slot: 24
+        quantity: 32
+        name: "&6Cookie x32"
+        buyPrice: 15
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      12:
+        material: PUMPKIN_PIE
+        slot: 29
+        quantity: 8
+        name: "&6Pumpkin Pie x8"
+        buyPrice: 25
+        sellPrice: 10
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      13:
+        material: CAKE
+        slot: 30
+        quantity: 1
+        name: "&fCake"
+        buyPrice: 80
+        sellPrice: 40
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      14:
+        material: MUSHROOM_STEW
+        slot: 31
+        quantity: 4
+        name: "&6Mushroom Stew x4"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      15:
+        material: RABBIT_STEW
+        slot: 32
+        quantity: 4
+        name: "&6Rabbit Stew x4"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      16:
+        material: BEETROOT_SOUP
+        slot: 33
+        quantity: 4
+        name: "&4Beetroot Soup x4"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      17:
+        material: DRIED_KELP
+        slot: 38
+        quantity: 32
+        name: "&aDried Kelp x32"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      18:
+        material: APPLE
+        slot: 39
+        quantity: 16
+        name: "&aApple x16"
+        buyPrice: 15
+        sellPrice: 7
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      19:
+        material: MELON_SLICE
+        slot: 40
+        quantity: 16
+        name: "&aWatermelon Slice x16"
+        buyPrice: 12
+        sellPrice: 6
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      20:
+        material: SUSPICIOUS_STEW
+        slot: 41
+        quantity: 2
+        name: "&5Suspicious Stew x2"
+        buyPrice: 50
+        sellPrice: 25
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+
+# ══════════════════════════════════════════════════════
+#                   ⛏️ TOOLS
+# ══════════════════════════════════════════════════════
+  tools:
+    name: "&8[ &b⛏ Tools Shop &8]"
+    size: 54
+    fillItem:
+      material: LIGHT_BLUE_STAINED_GLASS_PANE
+      name: " "
+    buttons:
+      previous:
+        slot: 45
+        material: ARROW
+        name: "&7Previous Page"
+      next:
+        slot: 53
+        material: ARROW
+        name: "&7Next Page"
+      close:
+        slot: 49
+        material: BARRIER
+        name: "&cBack"
+    items:
+      1:
+        material: WOODEN_PICKAXE
+        slot: 10
+        name: "&6Wooden Pickaxe"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      2:
+        material: STONE_PICKAXE
+        slot: 11
+        name: "&7Stone Pickaxe"
+        buyPrice: 25
+        sellPrice: 12
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      3:
+        material: IRON_PICKAXE
+        slot: 12
+        name: "&fIron Pickaxe"
+        buyPrice: 100
+        sellPrice: 50
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      4:
+        material: GOLDEN_PICKAXE
+        slot: 13
+        name: "&eGolden Pickaxe"
+        buyPrice: 80
+        sellPrice: 40
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      5:
+        material: DIAMOND_PICKAXE
+        slot: 14
+        name: "&bDiamond Pickaxe"
+        buyPrice: 600
+        sellPrice: 300
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      6:
+        material: NETHERITE_PICKAXE
+        slot: 15
+        name: "&8Netherite Pickaxe"
+        buyPrice: 2500
+        sellPrice: 1250
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      7:
+        material: WOODEN_AXE
+        slot: 19
+        name: "&6Wooden Axe"
+        buyPrice: 10
+        sellPrice: 5
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      8:
+        material: STONE_AXE
+        slot: 20
+        name: "&7Stone Axe"
+        buyPrice: 22
+        sellPrice: 11
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      9:
+        material: IRON_AXE
+        slot: 21
+        name: "&fIron Axe"
+        buyPrice: 90
+        sellPrice: 45
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      10:
+        material: DIAMOND_AXE
+        slot: 22
+        name: "&bDiamond Axe"
+        buyPrice: 550
+        sellPrice: 275
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      11:
+        material: NETHERITE_AXE
+        slot: 23
+        name: "&8Netherite Axe"
+        buyPrice: 2200
+        sellPrice: 1100
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      12:
+        material: WOODEN_SHOVEL
+        slot: 28
+        name: "&6Wooden Shovel"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      13:
+        material: IRON_SHOVEL
+        slot: 29
+        name: "&fIron Shovel"
+        buyPrice: 70
+        sellPrice: 35
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      14:
+        material: DIAMOND_SHOVEL
+        slot: 30
+        name: "&bDiamond Shovel"
+        buyPrice: 450
+        sellPrice: 225
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      15:
+        material: NETHERITE_SHOVEL
+        slot: 31
+        name: "&8Netherite Shovel"
+        buyPrice: 2000
+        sellPrice: 1000
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      16:
+        material: WOODEN_HOE
+        slot: 32
+        name: "&6Wooden Hoe"
+        buyPrice: 8
+        sellPrice: 4
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      17:
+        material: IRON_HOE
+        slot: 33
+        name: "&fIron Hoe"
+        buyPrice: 60
+        sellPrice: 30
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      18:
+        material: DIAMOND_HOE
+        slot: 38
+        name: "&bDiamond Hoe"
+        buyPrice: 400
+        sellPrice: 200
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      19:
+        material: NETHERITE_HOE
+        slot: 39
+        name: "&8Netherite Hoe"
+        buyPrice: 1800
+        sellPrice: 900
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      20:
+        material: SHEARS
+        slot: 40
+        name: "&7Shears"
+        buyPrice: 50
+        sellPrice: 25
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      21:
+        material: FLINT_AND_STEEL
+        slot: 41
+        name: "&cFlint and Steel"
+        buyPrice: 40
+        sellPrice: 20
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      22:
+        material: CARROT_ON_A_STICK
+        slot: 42
+        name: "&6Carrot on a Stick"
+        buyPrice: 30
+        sellPrice: 15
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
+      23:
+        material: WARPED_FUNGUS_ON_A_STICK
+        slot: 43
+        name: "&5Warped Fungus on Stick"
+        buyPrice: 35
+        sellPrice: 17
+        lore:
+          - " "
+          - "&7Buy: &a$%buy_price%"
+          - "&7Sell: &c$%sell_price%"
+          - " "
