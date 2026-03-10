@@ -1,0 +1,133 @@
+name: Build AncientOverlord Plugin
+
+# ââââââââââââââââââââââââââââââââââââââââââââââââ
+#  ÙØªÙ ÙÙØ´ØºÙÙÙ Ø§ÙÙ WorkflowØ
+# ââââââââââââââââââââââââââââââââââââââââââââââââ
+on:
+  push:
+    branches:
+      - main
+      - boss-update
+      - 'feature/**'     # Ø£Ù ÙØ±Ø¹ ÙØ¨Ø¯Ø£ Ø¨Ù feature/
+    paths:
+      - 'src/**'         # ÙÙØ· Ø¹ÙØ¯ ØªØºÙÙØ± Ø§ÙÙÙØ¯
+      - 'pom.xml'        # Ø£Ù ÙÙÙ Ø§ÙØ¨ÙØ§Ø¡
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - 'pom.xml'
+
+# ââââââââââââââââââââââââââââââââââââââââââââââââ
+#  ÙØªØºÙØ±Ø§Øª Ø¹Ø§ÙØ©
+# ââââââââââââââââââââââââââââââââââââââââââââââââ
+env:
+  JAVA_VERSION: '17'
+  ARTIFACT_NAME: AncientOverlord-1.0.0
+
+# ââââââââââââââââââââââââââââââââââââââââââââââââ
+#  Ø§ÙÙ Jobs
+# ââââââââââââââââââââââââââââââââââââââââââââââââ
+jobs:
+
+  build:
+    name: Maven Build & Package
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ââ 1. Ø§Ø³ØªÙØ³Ø§Ø® Ø§ÙÙÙØ¯ ââââââââââââââââââââââ
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ââ 2. Ø¥Ø¹Ø¯Ø§Ø¯ Java 17 (Temurin / Eclipse) ââ
+      - name: Set up JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: temurin
+          cache: maven          # ØªØ®Ø²ÙÙ ÙØ¤ÙØª ÙÙ ~/.m2 ÙØªØ³Ø±ÙØ¹ Ø§ÙØ¨ÙØ§Ø¡
+
+      # ââ 3. Ø§ÙØªØ­ÙÙ ÙÙ Ø¥ØµØ¯Ø§Ø± Maven Ù Java âââââââ
+      - name: Verify Java & Maven versions
+        run: |
+          java -version
+          mvn -version
+
+      # ââ 4. Ø¨ÙØ§Ø¡ Ø§ÙÙ jar (ØªØ®Ø·Ù Ø§ÙÙ tests ÙØ£ÙÙ Bukkit plugin) ââ
+      - name: Build with Maven
+        run: mvn clean package -B -DskipTests
+
+      # ââ 5. Ø§ÙØªØ­ÙÙ ÙÙ ÙØ¬ÙØ¯ Ø§ÙÙ jar ââââââââââââââ
+      - name: Verify JAR was created
+        run: |
+          echo "=== Contents of target/ ==="
+          ls -lh target/*.jar
+          echo "â Build successful: $(ls target/*-shaded.jar 2>/dev/null || ls target/*.jar | head -1)"
+
+      # ââ 6. Ø±ÙØ¹ Ø§ÙÙ jar ÙÙ Artifact âââââââââââââ
+      #    ÙÙÙÙ ØªØ­ÙÙÙÙ ÙÙ ØµÙØ­Ø© Ø§ÙÙ Actions ÙØ¨Ø§Ø´Ø±Ø©
+      - name: Upload plugin JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}-jar
+          path: target/*.jar
+          retention-days: 14    # Ø§ÙØ§Ø­ØªÙØ§Ø¸ Ø¨Ø§ÙÙ artifact ÙÙØ¯Ø© 14 ÙÙÙ
+
+  # ââââââââââââââââââââââââââââââââââââââââââââ
+  #  Release ØªÙÙØ§Ø¦Ù Ø¹ÙØ¯ Ø¹ÙÙ push Ø¹ÙÙ main ÙÙØ·
+  # ââââââââââââââââââââââââââââââââââââââââââââ
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: build                # ÙÙØªØ¸Ø± ÙØ¬Ø§Ø­ job Ø§ÙØ¨ÙØ§Ø¡ Ø£ÙÙØ§Ù
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    permissions:
+      contents: write           # ÙØ·ÙÙØ¨ ÙØ¥ÙØ´Ø§Ø¡ Release
+
+    steps:
+
+      # ââ 1. Ø§Ø³ØªÙØ³Ø§Ø® Ø§ÙÙÙØ¯ ââââââââââââââââââââââ
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ââ 2. Ø¥Ø¹Ø¯Ø§Ø¯ Java âââââââââââââââââââââââââ
+      - name: Set up JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: temurin
+          cache: maven
+
+      # ââ 3. Ø¥Ø¹Ø§Ø¯Ø© Ø§ÙØ¨ÙØ§Ø¡ ÙÙÙ Release âââââââââââââ
+      - name: Build with Maven
+        run: mvn clean package -B -DskipTests
+
+      # ââ 4. Ø¥ÙØ´Ø§Ø¡ Release ÙØ¹ Ø±ÙØ¹ Ø§ÙÙ jar ââââââââ
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: "AncientOverlord v${{ github.run_number }}"
+          body: |
+            ## AncientOverlord Plugin - Auto Release
+
+            **Commit:** `${{ github.sha }}`
+            **Branch:** `${{ github.ref_name }}`
+            **Build:** #${{ github.run_number }}
+
+            ### Changes
+            ${{ github.event.head_commit.message }}
+
+            ### Installation
+            1. Place the JAR in your server's `plugins/` folder
+            2. Copy `MythicMobs/Mobs/AncientOverlord.yml` â `plugins/MythicMobs/Mobs/`
+            3. Copy `MythicMobs/Skills/AncientOverlord_Skills.yml` â `plugins/MythicMobs/Skills/`
+            4. Restart server or run `/mm reload`
+          files: target/*.jar
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
