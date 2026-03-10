@@ -1,0 +1,145 @@
+# ==============================
+#   MythicMobs - HellKing.yml
+#   Made for ZTRX Application
+# ==============================
+
+HellKing:
+  Type: WITHER_SKELETON
+  Display: '&4&l👑 Zetrex-Boss &4&l👑'
+  Health: 2000
+  Damage: 18
+  Armor: 15
+  BossBar:
+    Enabled: true
+    Title: '&4👑 Zetrex-Boss'
+    Range: 60
+    Color: RED
+    Style: SEGMENTED_10
+  Options:
+    MovementSpeed: 0.28
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Despawn: false
+    Aggressive: true
+    FollowRange: 60
+  Faction: HellArmy
+
+  # ══════════════════════════════
+  #         الـ Skills
+  # ══════════════════════════════
+  Skills:
+    # ── نار حوله دايماً ──
+    - skill{s=HellFire} @self ~onTimer:40
+
+    # ── صاعقة كل 5 ثواني ──
+    - skill{s=LightningStrike} @PIR{r=15} ~onTimer:100
+
+    # ── يطير اللاعبين ──
+    - skill{s=LaunchPlayers} @PIR{r=10} ~onTimer:80
+
+    # ── سم كل 3 ثواني ──
+    - skill{s=PoisonAura} @PIR{r=8} ~onTimer:60
+
+    # ── يرسل أتباع كل 20 ثانية ──
+    - skill{s=SpawnMinions} @self ~onTimer:400
+
+    # ── رسالة عند الظهور ──
+    - message{m='&4&l👑 &cاسمعوا يا ضعفاء... &4زتركس بوس &cظهر!'} @PIR{r=100} ~onSpawn
+
+    # ── رسالة عند الموت ──
+    - message{m='&a&l✔ &eأسقطتم &4زتركس بوس&e! احتفلوا...'} @PIR{r=100} ~onDeath
+
+    # ── مرحلة الغضب عند 30% HP ──
+    - skill{s=RageMode} @self ~onTimer:20 ?health{h=<30%}
+
+  # ══════════════════════════════
+  #           الـ Drops
+  # ══════════════════════════════
+  Drops:
+    - NETHERITE_INGOT 2-5 1
+    - DIAMOND 5-10 1
+    - GOLD_INGOT 10-20 1
+    - EXPERIENCE 500-1000 1
+    - NETHER_STAR 1 0.3        # 30% احتمال
+    - ENCHANTED_GOLDEN_APPLE 1-3 0.5
+
+# ══════════════════════════════
+#         الـ Skills تفاصيل
+# ══════════════════════════════
+
+HellFire:
+  Skills:
+    - particles{p=FLAME;amount=30;speed=0.1;hRadius=2;vRadius=1} @self ~always
+    - effect:FIRE_RESISTANCE{duration=100} @self ~always
+
+LightningStrike:
+  Skills:
+    - lightning @target
+    - effect:SLOW{duration=60;amplifier=1} @target
+    - message{m='&c⚡ صاعقة زتركس تضربك!'} @target
+
+LaunchPlayers:
+  Skills:
+    - push{speed=2.5;yAdd=1.2} @PIR{r=10}
+    - message{m='&4💨 قوة زتركس تطيرك!'} @PIR{r=10}
+
+PoisonAura:
+  Skills:
+    - effect:POISON{duration=100;amplifier=2} @PIR{r=8}
+    - particles{p=SPELL_WITCH;amount=15;hRadius=3} @self ~always
+
+SpawnMinions:
+  Skills:
+    - spawn{mob=HellMinion;amount=3} @self
+    - message{m='&4👹 &cيصدر أوامره... الأتباع يظهرون!'} @PIR{r=60}
+
+RageMode:
+  Skills:
+    - effect:SPEED{duration=200;amplifier=3} @self
+    - effect:STRENGTH{duration=200;amplifier=2} @self
+    - particles{p=LAVA;amount=50;hRadius=3} @self
+    - message{m='&4&l⚠ &c&lزتركس بوس في حالة غضب!!! &4&l⚠'} @PIR{r=100}
+    - sound{s=ENTITY_WITHER_HURT;v=2;p=0.5} @PIR{r=60}
+
+# ══════════════════════════════
+#       الأتباع - HellMinion
+# ══════════════════════════════
+
+HellMinion:
+  Type: ZOMBIE
+  Display: '&c👹 اداري زتركس'
+  Health: 200
+  Damage: 8
+  Armor: 5
+  Options:
+    MovementSpeed: 0.32
+    PreventOtherDrops: true
+    Despawn: true
+  Equipment:
+    - NETHERITE_SWORD HAND
+    - CHAINMAIL_CHESTPLATE CHEST
+    - CHAINMAIL_LEGGINGS LEGS
+    - CHAINMAIL_BOOTS FEET
+  Skills:
+    - effect:FIRE_RESISTANCE{duration=100} @self ~always
+    - effect:POISON{duration=60;amplifier=1} @PIR{r=3} ~onTimer:40
+```
+
+---
+
+## 📁 وين تحطه
+```
+plugins/
+└── MythicMobs/
+    └── mobs/
+        └── HellKing.yml
+```
+
+ثم:
+```
+/mm reload
+```
+
+ليظهر البوس:
+```
+/mm mobs spawn Zetrex-Boss
