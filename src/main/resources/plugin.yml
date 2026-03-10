@@ -1,0 +1,24 @@
+name: AncientOverlord
+version: '${project.version}'
+main: mc.zetrex.ancientoverlord.AncientOverlordPlugin
+api-version: '1.20'
+description: "Custom Boss Plugin - Ancient Overlord for ZetrexMC"
+author: ayoub-Devolper
+
+# MythicMobs must be loaded before this plugin
+depend:
+  - MythicMobs
+
+commands:
+  ancientoverlord:
+    description: "Spawn or manage the Ancient Overlord boss"
+    usage: "/ancientoverlord <spawn|kill|reload>"
+    aliases:
+      - ao
+    permission: ancientoverlord.admin
+    permission-message: "&cYou don't have permission to use this command."
+
+permissions:
+  ancientoverlord.admin:
+    description: "Full access to AncientOverlord commands"
+    default: op

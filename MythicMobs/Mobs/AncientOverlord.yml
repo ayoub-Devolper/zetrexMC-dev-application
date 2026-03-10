@@ -1,0 +1,89 @@
+# ================================================
+#   MythicMobs - AncientOverlord.yml
+#   ÃÂ§ÃÃÂ¨ÃÃÂ³ ÃÂ§ÃÃÂ±ÃÂ¦ÃÃÂ³Ã: Ancient Overlord
+# ================================================
+
+AncientOverlord:
+  Type: WARDEN
+  Display: '&5&lÃ° Ancient Overlord &5&lÃ°'
+  Health: 3000
+  Damage: 22
+  Armor: 18
+
+  # Ã¢Ã¢ ÃÂ´ÃÂ±ÃÃÂ· ÃÂ¥ÃÂ¶ÃÂ§ÃÃÃÂ© Ã¢Ã¢
+  BossBar:
+    Enabled: true
+    Title: '&5Ã° Ancient Overlord &7| &c{health}%'
+    Range: 80
+    Color: PURPLE
+    Style: SEGMENTED_20
+
+  Options:
+    MovementSpeed: 0.25
+    PreventOtherDrops: true   # ÃÃÃÂ¹ ÃÂºÃÃÂ± ÃÂ§ÃÃÂ¬ÃÃÂ§ÃÂ¦ÃÂ² ÃÂ§ÃÃÃÂ­ÃÂ¯ÃÂ¯ÃÂ©
+    PreventSunburn: true
+    Despawn: false
+    Aggressive: true
+    FollowRange: 80
+    KnockbackResistance: 1.0  # ÃÃÂ§ÃÃÂ¹ ÃÃÃ ÃÂ§ÃÃÂ¯ÃÂ¹ÃÂ¹
+
+  # Ã¢Ã¢ ÃÃÃ ÃÂ§ÃÃÃÂ¬ÃÃÃ Ã¢Ã¢
+  Faction: AncientLegion
+
+  # ââââââââââââââââââââââââââââââ
+  #          ÃÂ§ÃÃ Skills
+  # ââââââââââââââââââââââââââââââ
+  Skills:
+
+    # ââ ÃÃÃ 1: Lightning Strike - ÃÂ¨ÃÂ±Ã ÃÃ 10 ÃÂ«ÃÃÂ§ÃÃ (200 tick) ââ
+    # @PIR{r=20}: ÃÃÃÂ³ÃÂªÃÃÂ¯Ã ÃÃÂ§ÃÂ¹ÃÂ¨ ÃÂªÃÂ­ÃÂª ÃÃÂ¯ÃÃÃ ÃÃ ÃÂ£ÃÃÂ«ÃÂ± ÃÃÃÃÂ§ 20 ÃÂ¨ÃÃ
+    - skill{s=AO_LightningStrike} @PIR{r=20} ~onTimer:200
+
+    # ââ ÃÃÃ 2: Super Launch - ÃÃÃÂ¯ÃÃÂ¹ ÃÂ§ÃÃÃÂ§ÃÂ¹ÃÂ¨ ÃÂ¹ÃÃÂ¯ ÃÃ ÃÂ¶ÃÂ±ÃÂ¨ÃÂ© ââ
+    # @trigger: ÃÃÃÂ³ÃÂªÃÃÂ¯Ã ÃÂ§ÃÃÃÂ§ÃÂ¹ÃÂ¨ ÃÂ§ÃÃÃÂ¶ÃÂ±ÃÃÂ¨
+    - skill{s=AO_SuperLaunch} @trigger ~onAttack
+
+    # ââ ÃÃÃ 3: Minion Summon - ÃÃÂ³ÃÂªÃÂ¯ÃÂ¹Ã ÃÂ¹ÃÃÂ¯ 50% HP (ÃÃÂ±ÃÂ© ÃÃÂ§ÃÂ­ÃÂ¯ÃÂ© ÃÃÃÂ·) ââ
+    # ?health{h=<50%}: ÃÂ´ÃÂ±ÃÂ· ÃÂ§ÃÃÂµÃÂ­ÃÂ©
+    # cooldown=9999: ÃÃÃÂ¹ ÃÂªÃÃÃ ÃÂ§ÃÃÃ ÃÃÃÂ±ÃÂ© ÃÂ«ÃÂ§ÃÃÃÂ©
+    - skill{s=AO_MinionSummon;cooldown=9999} @self ~onTimer:20 ?health{h=<50%}
+
+    # ââ ÃÂ±ÃÂ³ÃÂ§ÃÃÂ© ÃÃÂ¹ÃÃÂ¯ ÃÂ§ÃÃÂ¸ÃÃÃÃÂ± ââ
+    - message{m='&5&lÃ° &d&lThe Ancient Overlord &5ÃÂ¥ÃÃ ÃÂ¸ÃÃ ÃÃÃÂ£ÃÂ±ÃÂ¶ ÃÃÃ ÃÂ§ÃÃÃ! &5&lÃ°'} @PIR{r=100} ~onSpawn
+
+    # ââ ÃÂ±ÃÂ³ÃÂ§ÃÃÂ© ÃÃÂ¹ÃÃÂ¯ ÃÂ§ÃÃÃÃÂ§ÃÂª ââ
+    - message{m='&a&lÃ¢ &eÃÂ£ÃÂ³ÃÃÂ·ÃÃÃÃ ÃÂ§ÃÃ &5Ancient Overlord&e! ÃÂ³ÃÃÃ Ã ÃÂ§ÃÃÂ¢ÃÃÃ...'} @PIR{r=100} ~onDeath
+
+  # ââââââââââââââââââââââââââââââ
+  #           ÃÂ§ÃÃ Drops
+  # ââââââââââââââââââââââââââââââ
+  Drops:
+    # 3 Netherite Ingots - 100% ÃÃÃ
+    - NETHERITE_INGOT 3 1.0
+    # 1 Nether Star - 100% ÃÃÃ
+    - NETHER_STAR 1 1.0
+
+# ââââââââââââââââââââââââââââââ
+#    AncientMinion - ÃÂ§ÃÃÂ²ÃÃÃÂ¨Ã ÃÂ§ÃÃÂ­ÃÂ§ÃÂ±ÃÂ³
+# ââââââââââââââââââââââââââââââ
+AncientMinion:
+  Type: ZOMBIE
+  Display: '&5Ã° AncientMinion'
+  Health: 300
+  Damage: 10
+  Armor: 8
+  Options:
+    MovementSpeed: 0.30
+    PreventOtherDrops: true
+    Despawn: true
+    KnockbackResistance: 0.5
+  Equipment:
+    - IRON_SWORD HAND
+    - CHAINMAIL_CHESTPLATE CHEST
+    - CHAINMAIL_LEGGINGS LEGS
+    - CHAINMAIL_BOOTS FEET
+  Skills:
+    # ÃÃ ÃÂ§ÃÃ ÃÃÃ ÃÃ ÃÂ§ÃÃÂ´ÃÃÂ³
+    - effect:FIRE_RESISTANCE{duration=200} @self ~always
+    # ÃÃ Ã ÃÂ§ÃÃÃ ÃÂ¹ÃÃÂ¯ ÃÃÃÂ§ÃÃ ÃÂ§ÃÃÂ¨ÃÃÂ³
+    - message{m='&5Ã° &cAncient Minion ÃÂ¸ÃÃ ÃÃÃÃÂ­ÃÂ§ÃÂ±ÃÂ¨ ÃÂ¹ÃÃÃÃ!'} @PIR{r=20} ~onSpawn
