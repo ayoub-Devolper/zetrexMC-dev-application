@@ -1,129 +1,90 @@
 # ==============================
-#   Coin Shop - DeluxeMenus
-#   GoldShop Style
+#   Kits Menu - DeluxeMenus
+#   Supports Cooldown display
 # ==============================
 
-menu_title: "&8[ &6متجر العملات &8]"
+menu_title: "&8[ &aKits &8]"
 menu_type: CHEST
-menu_rows: 5
-open_command: coinshop
+menu_rows: 4
+open_command: kits
 
 items:
   background:
-    material: YELLOW_STAINED_GLASS_PANE
-    slot: 0-44
+    material: GREEN_STAINED_GLASS_PANE
+    slot: 0-35
     display_name: " "
 
-  # ── عنوان المتجر ──
-  title:
-    material: GOLD_BLOCK
-    slot: 4
-    display_name: "&6&lمتجر العملات"
+  kit_starter:
+    material: IRON_SWORD
+    slot: 11
+    display_name: "&aStarter Kit"
     lore:
       - " "
-      - "&7رصيدك: &e%vault_eco_balance_fixed% &6عملة"
+      - "&7Kit Contents:"
+      - "&f- &7Iron Sword"
+      - "&f- &764x Bread"
+      - "&f- &7Full Iron Armor"
       - " "
-
-  # ── منتج 1: تفاحة ذهبية ──
-  item_golden_apple:
-    material: GOLDEN_APPLE
-    slot: 20
-    display_name: "&eتفاحة ذهبية &8x8"
-    lore:
+      - "&7Cooldown: &e%cmdcooldown_kit_starter_formatted%"
       - " "
-      - "&7السعر: &e50 &6عملة"
-      - "&7رصيدك: &a%vault_eco_balance_fixed%"
-      - " "
-      - "&aاضغط للشراء"
+      - "&aClick to claim!"
       - " "
     left_click_commands:
-      - "[takemoney] 50"
-      - "[console] give %player_name% golden_apple 8"
-      - "[message] &aاشتريت &e8 تفاحة ذهبية &aبـ &e50 عملة!"
-    left_click_requirement:
-      requirements:
-        enough_money:
-          type: has money
-          amount: 50
-          deny_commands:
-            - "[message] &cما عندك رصيد كافي! تحتاج &e50 &cعملة"
+      - "[console] kit starter %player_name%"
+    left_click_cooldown: 86400
+    left_click_cooldown_bypass: ztrx.kit.bypass
 
-  # ── منتج 2: توب خبز ──
-  item_bread:
-    material: BREAD
-    slot: 21
-    display_name: "&eخبز &8x64"
+  kit_vip:
+    material: DIAMOND_SWORD
+    slot: 13
+    display_name: "&bVIP &eKit"
     lore:
       - " "
-      - "&7السعر: &e20 &6عملة"
-      - "&7رصيدك: &a%vault_eco_balance_fixed%"
+      - "&7Kit Contents:"
+      - "&f- &7Diamond Sword Sharpness II"
+      - "&f- &732x Golden Apple"
+      - "&f- &7Full Diamond Armor"
       - " "
-      - "&aاضغط للشراء"
+      - "&7Cooldown: &e%cmdcooldown_kit_vip_formatted%"
+      - " "
+      - "&aClick to claim!"
       - " "
     left_click_commands:
-      - "[takemoney] 20"
-      - "[console] give %player_name% bread 64"
-      - "[message] &aاشتريت &e64 خبزة &aبـ &e20 عملة!"
-    left_click_requirement:
+      - "[console] kit vip %player_name%"
+    left_click_cooldown: 43200
+    view_requirement:
       requirements:
-        enough_money:
-          type: has money
-          amount: 20
-          deny_commands:
-            - "[message] &cما عندك رصيد كافي! تحتاج &e20 &cعملة"
+        vip_check:
+          type: has permission
+          permission: ztrx.vip
 
-  # ── منتج 3: جوهرة ──
-  item_diamond:
-    material: DIAMOND
-    slot: 22
-    display_name: "&bجوهرة &8x5"
+  kit_mvp:
+    material: NETHERITE_SWORD
+    slot: 15
+    display_name: "&5MVP &dKit"
     lore:
       - " "
-      - "&7السعر: &e200 &6عملة"
-      - "&7رصيدك: &a%vault_eco_balance_fixed%"
+      - "&7Kit Contents:"
+      - "&f- &7Netherite Sword Fire Aspect"
+      - "&f- &716x Enchanted Golden Apple"
+      - "&f- &7Full Netherite Armor"
       - " "
-      - "&aاضغط للشراء"
+      - "&7Cooldown: &e%cmdcooldown_kit_mvp_formatted%"
       - " "
-    left_click_commands:
-      - "[takemoney] 200"
-      - "[console] give %player_name% diamond 5"
-      - "[message] &aاشتريت &b5 جواهر &aبـ &e200 عملة!"
-    left_click_requirement:
-      requirements:
-        enough_money:
-          type: has money
-          amount: 200
-          deny_commands:
-            - "[message] &cما عندك رصيد كافي! تحتاج &e200 &cعملة"
-
-  # ── منتج 4: ذهب ──
-  item_gold:
-    material: GOLD_INGOT
-    slot: 23
-    display_name: "&eذهب &8x16"
-    lore:
-      - " "
-      - "&7السعر: &e75 &6عملة"
-      - "&7رصيدك: &a%vault_eco_balance_fixed%"
-      - " "
-      - "&aاضغط للشراء"
+      - "&aClick to claim!"
       - " "
     left_click_commands:
-      - "[takemoney] 75"
-      - "[console] give %player_name% gold_ingot 16"
-      - "[message] &aاشتريت &e16 ذهبة &aبـ &e75 عملة!"
-    left_click_requirement:
+      - "[console] kit mvp %player_name%"
+    left_click_cooldown: 21600
+    view_requirement:
       requirements:
-        enough_money:
-          type: has money
-          amount: 75
-          deny_commands:
-            - "[message] &cما عندك رصيد كافي! تحتاج &e75 &cعملة"
+        mvp_check:
+          type: has permission
+          permission: ztrx.mvp
 
-  # ── رجوع ──
   back:
     material: ARROW
-    slot: 40
-    display_name: "&7رجوع"
+    slot: 31
+    display_name: "&7Back"
     left_click_commands:
       - "[openguimenu] profile_menu"
