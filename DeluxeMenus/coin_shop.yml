@@ -1,90 +1,180 @@
 # ==============================
-#   Kits Menu - DeluxeMenus
-#   Supports Cooldown display
+#   Coin Shop - DeluxeMenus
+#   GoldShop Style
 # ==============================
 
-menu_title: "&8[ &aKits &8]"
+menu_title: "&8[ &6Coin Shop &8]"
 menu_type: CHEST
-menu_rows: 4
-open_command: kits
+menu_rows: 5
+open_command: coinshop
 
 items:
   background:
-    material: GREEN_STAINED_GLASS_PANE
-    slot: 0-35
+    material: YELLOW_STAINED_GLASS_PANE
+    slot: 0-44
     display_name: " "
 
-  kit_starter:
-    material: IRON_SWORD
-    slot: 11
-    display_name: "&aStarter Kit"
+  title:
+    material: GOLD_BLOCK
+    slot: 4
+    display_name: "&6&lCoin Shop"
     lore:
       - " "
-      - "&7Kit Contents:"
-      - "&f- &7Iron Sword"
-      - "&f- &764x Bread"
-      - "&f- &7Full Iron Armor"
+      - "&7Your Balance: &e%vault_eco_balance_fixed% &6coins"
       - " "
-      - "&7Cooldown: &e%cmdcooldown_kit_starter_formatted%"
-      - " "
-      - "&aClick to claim!"
-      - " "
-    left_click_commands:
-      - "[console] kit starter %player_name%"
-    left_click_cooldown: 86400
-    left_click_cooldown_bypass: ztrx.kit.bypass
 
-  kit_vip:
-    material: DIAMOND_SWORD
-    slot: 13
-    display_name: "&bVIP &eKit"
+  item_golden_apple:
+    material: GOLDEN_APPLE
+    slot: 20
+    display_name: "&eGolden Apple &8x8"
     lore:
       - " "
-      - "&7Kit Contents:"
-      - "&f- &7Diamond Sword Sharpness II"
-      - "&f- &732x Golden Apple"
-      - "&f- &7Full Diamond Armor"
+      - "&7Price: &e50 &6coins"
+      - "&7Balance: &a%vault_eco_balance_fixed%"
       - " "
-      - "&7Cooldown: &e%cmdcooldown_kit_vip_formatted%"
-      - " "
-      - "&aClick to claim!"
+      - "&aClick to purchase!"
       - " "
     left_click_commands:
-      - "[console] kit vip %player_name%"
-    left_click_cooldown: 43200
-    view_requirement:
+      - "[takemoney] 50"
+      - "[console] give %player_name% golden_apple 8"
+      - "[message] &aPurchased &e8x Golden Apple &afor &e50 coins!"
+    left_click_requirement:
       requirements:
-        vip_check:
-          type: has permission
-          permission: ztrx.vip
+        enough_money:
+          type: has money
+          amount: 50
+          deny_commands:
+            - "[message] &cNot enough coins! You need &e50 &ccoins."
 
-  kit_mvp:
-    material: NETHERITE_SWORD
-    slot: 15
-    display_name: "&5MVP &dKit"
+  item_bread:
+    material: BREAD
+    slot: 21
+    display_name: "&eBread &8x64"
     lore:
       - " "
-      - "&7Kit Contents:"
-      - "&f- &7Netherite Sword Fire Aspect"
-      - "&f- &716x Enchanted Golden Apple"
-      - "&f- &7Full Netherite Armor"
+      - "&7Price: &e20 &6coins"
+      - "&7Balance: &a%vault_eco_balance_fixed%"
       - " "
-      - "&7Cooldown: &e%cmdcooldown_kit_mvp_formatted%"
-      - " "
-      - "&aClick to claim!"
+      - "&aClick to purchase!"
       - " "
     left_click_commands:
-      - "[console] kit mvp %player_name%"
-    left_click_cooldown: 21600
-    view_requirement:
+      - "[takemoney] 20"
+      - "[console] give %player_name% bread 64"
+      - "[message] &aPurchased &e64x Bread &afor &e20 coins!"
+    left_click_requirement:
       requirements:
-        mvp_check:
-          type: has permission
-          permission: ztrx.mvp
+        enough_money:
+          type: has money
+          amount: 20
+          deny_commands:
+            - "[message] &cNot enough coins! You need &e20 &ccoins."
+
+  item_diamond:
+    material: DIAMOND
+    slot: 22
+    display_name: "&bDiamond &8x5"
+    lore:
+      - " "
+      - "&7Price: &e200 &6coins"
+      - "&7Balance: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&aClick to purchase!"
+      - " "
+    left_click_commands:
+      - "[takemoney] 200"
+      - "[console] give %player_name% diamond 5"
+      - "[message] &aPurchased &b5x Diamond &afor &e200 coins!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 200
+          deny_commands:
+            - "[message] &cNot enough coins! You need &e200 &ccoins."
+
+  item_gold:
+    material: GOLD_INGOT
+    slot: 23
+    display_name: "&eGold Ingot &8x16"
+    lore:
+      - " "
+      - "&7Price: &e75 &6coins"
+      - "&7Balance: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&aClick to purchase!"
+      - " "
+    left_click_commands:
+      - "[takemoney] 75"
+      - "[console] give %player_name% gold_ingot 16"
+      - "[message] &aPurchased &e16x Gold Ingot &afor &e75 coins!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 75
+          deny_commands:
+            - "[message] &cNot enough coins! You need &e75 &ccoins."
+
+  item_rank_vip:
+    material: NETHER_STAR
+    slot: 29
+    display_name: "&e&lRANK &6VIP"
+    lore:
+      - " "
+      - "&7Price: &e5000 &6coins"
+      - "&7Balance: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&7Perks:"
+      - "&f- &eVIP Kit access"
+      - "&f- &eSpecial prefix &6[VIP]"
+      - "&f- &eExtra features"
+      - " "
+      - "&aClick to purchase!"
+      - " "
+    left_click_commands:
+      - "[takemoney] 5000"
+      - "[console] lp user %player_name% parent set vip"
+      - "[message] &aYou have purchased &eVIP &arank!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 5000
+          deny_commands:
+            - "[message] &cNot enough coins! You need &e5000 &ccoins."
+
+  item_rank_mvp:
+    material: BEACON
+    slot: 30
+    display_name: "&5&lRANK &dMVP"
+    lore:
+      - " "
+      - "&7Price: &e15000 &6coins"
+      - "&7Balance: &a%vault_eco_balance_fixed%"
+      - " "
+      - "&7Perks:"
+      - "&f- &dMVP Kit access"
+      - "&f- &dSpecial prefix &5[MVP]"
+      - "&f- &dAll VIP features"
+      - " "
+      - "&aClick to purchase!"
+      - " "
+    left_click_commands:
+      - "[takemoney] 15000"
+      - "[console] lp user %player_name% parent set mvp"
+      - "[message] &aYou have purchased &dMVP &arank!"
+    left_click_requirement:
+      requirements:
+        enough_money:
+          type: has money
+          amount: 15000
+          deny_commands:
+            - "[message] &cNot enough coins! You need &e15000 &ccoins."
 
   back:
     material: ARROW
-    slot: 31
+    slot: 40
     display_name: "&7Back"
     left_click_commands:
       - "[openguimenu] profile_menu"
+
